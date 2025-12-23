@@ -1,5 +1,6 @@
 package kr.soft.shopping.api;
 
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,5 +20,11 @@ public class StudyController {
     public String test1(){
         logger.info("Test Action");
         return "Hello World";
+    }
+
+    @GetMapping("/data1")
+    public void data1(HttpServletRequest request){
+        String data = request.getParameter("text");
+        logger.info("data {}", data);
     }
 }
