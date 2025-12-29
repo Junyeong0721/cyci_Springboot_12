@@ -1,4 +1,4 @@
-package kr.soft.shopping.dto.board;
+package kr.soft.shopping.dto.member;
 
 import lombok.Data;
 
