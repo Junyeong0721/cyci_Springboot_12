@@ -19,9 +19,9 @@
         (#{userId}, #{title}, #{content}, SYSDATE())
     </insert>
 
-    <select id="login" parameterType="String" resultType="String">
+    <select id="login" parameterType="String" resultType="MemberLoginIdxDTO">
         SELECT
-            USER_PW
+            USER_IDX, USER_PW
         FROM
             CYCI_USER
         WHERE
